@@ -1,0 +1,163 @@
+# ╭─────────────── ✦ ────────────────╮
+#│     DOTFILES GITIGNORE             │
+# ╰─────────────── ✦ ────────────────╯
+# Security & Privacy focused
+
+
+# ═══════════════════════════════════
+# RUNTIME CACHE FILES
+# ═══════════════════════════════════
+
+.local/
+
+
+
+# ═══════════════════════════════════
+# FIREFOX / BROWSER (SENSITIVE)
+# ═══════════════════════════════════
+
+# Actual Mozilla Firefox profiles (contains history, cookies, passwords)
+.mozilla/firefox/*.default*/
+.mozilla/firefox/*.default-release/
+# Keep the example setup guide
+!.mozilla/firefox/README.md
+!.mozilla/firefox/PROFILE_SETUP.md
+!.mozilla/firefox/chrome/*.example
+!.mozilla/firefox/chrome/websites/*.example
+
+
+# ═══════════════════════════════════
+# DISCORD / VESKTOP (PERSONAL SETTINGS)
+# ═══════════════════════════════════
+
+# Discord credentials and token cache (if accidentally added)
+.config/vesktop/settings/settings.json
+.config/vesktop/Cache/
+.config/vesktop/Code Cache/
+
+
+# ═══════════════════════════════════
+# TEMPORARY & EDITOR FILES
+# ═══════════════════════════════════
+
+*~
+*.swp
+*.swo
+*.swn
+.*.swo
+.*.swp
+.vimrc.local
+.DS_Store
+*.orig
+
+
+# ═══════════════════════════════════
+# DEVELOPMENT & BUILD
+# ═══════════════════════════════════
+
+node_modules/
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.venv/
+venv/
+*.egg-info/
+dist/
+build/
+.cargo/
+target/
+
+
+# ═══════════════════════════════════
+# VERSION CONTROL
+# ═══════════════════════════════════
+
+.git/
+.gitkeep
+.github/
+.gitmodules
+
+
+# ═══════════════════════════════════
+# ENVIRONMENT & CREDENTIALS
+# ═══════════════════════════════════
+
+.env
+.env.local
+.env.*.local
+*.key
+*.pem
+*.p12
+.credentials
+.aws/credentials
+.ssh/
+
+
+# ═══════════════════════════════════
+# LOGS & RUNTIME DATA
+# ═══════════════════════════════════
+
+*.log
+*.log.*
+*.pid
+.pytest_cache/
+coverage/
+.tox/
+
+
+# ═══════════════════════════════════
+# IDE & EDITOR
+# ═══════════════════════════════════
+
+.vscode/
+.idea/
+*.iml
+*.sublime-*
+.netrwhist
+*~
+.project
+.classpath
+.c9/
+*.tern-port
+
+
+# ═══════════════════════════════════
+# OS FILES
+# ═══════════════════════════════════
+
+.DS_Store
+Thumbs.db
+Desktop.ini
+.directory
+$RECYCLE.BIN/
+
+
+# ═══════════════════════════════════
+# LARGE BINARY FILES (OPTIONAL)
+# ═══════════════════════════════════
+# Uncomment if you want to exclude wallpaper images
+# (This keeps the repo size smaller)
+
+# .config/walls/
+
+
+# ═══════════════════════════════════
+# PERSONAL/SENSITIVE CONTENT
+# ═══════════════════════════════════
+
+# SSH keys
+.ssh/*
+!.ssh/config
+
+# Waybar secrets
+.config/waybar/modules/secrets.json
+
+# MPD
+.config/mpd/database
+
+# History files
+.zsh_history
+.bash_history
+.lesshst
+.viminfo

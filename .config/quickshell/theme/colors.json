@@ -1,0 +1,42 @@
+{
+  "_comment": "Material Design 3 Token Map",
+  "primary": "#9dd49e",
+  "on_primary": "#013913",
+  "primary_container": "#1e5127",
+  "on_primary_container": "#b8f1b9",
+  "primary_fixed": "#b8f1b9",
+  "on_primary_fixed": "#002108",
+
+  "secondary": "#b8ccb5",
+  "on_secondary": "#243424",
+  "secondary_container": "#3a4b3a",
+  "on_secondary_container": "#d4e8d0",
+  "secondary_fixed": "#d4e8d0",
+  "on_secondary_fixed": "#0f1f11",
+
+  "tertiary": "#a1ced6",
+  "on_tertiary": "#00363d",
+  "tertiary_container": "#1f4d54",
+  "on_tertiary_container": "#bdeaf3",
+
+  "surface": "#101510",
+  "on_surface": "#e0e4db",
+  "surface_variant": "#424940",
+  "on_surface_variant": "#c1c9be",
+  
+  "background": "#101510",
+  "on_background": "#e0e4db",
+
+  "surface_container_lowest": "#0b0f0b",
+  "surface_container_low": "#181d18",
+  "surface_container": "#1c211c",
+  "surface_container_high": "#272b26",
+  "surface_container_highest": "#313630",
+
+  "outline": "#8c9389",
+  "critical": "#ffb4ab",
+  "on_critical": "#690005",
+  "source_color": "#9dd49e",
+  "shadow": "#0b0f0b",
+  "scrim": "#0b0f0b"
+}

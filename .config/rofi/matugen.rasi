@@ -1,0 +1,13 @@
+* {
+ 
+
+     background: transparent;
+     backgroundAlt: #101510;
+     foreground: #e0e4db;
+     primary: #9dd49e;
+     active: #37693d;
+     danger: #ffb4ab;
+    
+    }
+
+ 
