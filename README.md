@@ -286,8 +286,8 @@ ttf-font-awesome                # Icon fonts
 sudo pacman -S hyprland kitty rofi wlogout swww matugen pywalfox \
   papirus-icon-theme gtk-3.0 gtk-4.0 qt5ct qt6ct adw-gtk3 \
   brightnessctl playerctl network-manager-applet swaylock \
-  wl-clipboard cliphist firefox fastfetch
-```
+  wl-clipboard cliphist firefox fastfetch quickshell
+  ```
 
 **For Fedora:**
 ```bash
@@ -316,10 +316,11 @@ sudo make install
 
 ### 3. **Clone Dotfiles**
 ```bash
-git clone https://github.com/archayu/dotfiles.git ~/.config
-cd ~/.config/dotfiles
-bash make-executable.sh
+git clone https://github.com/archayu/dotfiles.git 
+cd dotfiles
 ```
+- Move all the files in respective folders 
+- After that run the script `make-executable.sh` to make all the scripts run
 
 ### 4. **Set Permissions**
 The included `make-executable.sh` script sets execute permissions on:
@@ -341,18 +342,6 @@ cd cursors && mkdir -p ~/.local/share/icons
 cp -r Catppuccin-Mocha-Red ~/.local/share/icons/
 ```
 
-### 6. **Set Up Wallpapers**
-Place wallpapers in `~/.config/rofi/wallpaper/` and use the wallpaper manager:
-```bash
-~/.config/rofi/wallpaper/wall.sh
-```
-
-### 7. **Start Hyprland**
-```bash
-# If using a login manager, select Hyprland from the session menu
-# Or start manually:
-Hyprland
-```
 
 ---
 
@@ -447,21 +436,28 @@ brightnessctl list
 
 ## 📸 Screenshots
 
-Coming soon! Add your rice screenshots here to showcase:
-- Desktop overview with bar and notifications
-- Window management in action
-- Rofi launcher menu
-- Terminal with color scheme
-- Applications running with theme
-
-**How to add screenshots:**
-1. Take screenshots using `Super + P` (screenshot manager)
-2. Save them to a `screenshots/` directory in the dotfiles repo
-3. Update this section with image references like:
-   ```markdown
-   ![Desktop Overview](screenshots/desktop-overview.png)
-   ![Terminal & Applications](screenshots/terminal-apps.png)
-   ```
+<table>
+  <tr>
+    <td align="center">
+      <img src="https://cdn.imgtree.co/images/edRikHSz.png" width="400"><br>
+      <b>Desktop Overview</b>
+    </td>
+    <td align="center">
+      <img src="https://cdn.imgtree.co/images/GUmxI1BJ.png" width="400"><br>
+      <b>Terminal</b>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="https://cdn.imgtree.co/images/-sC43Hsk.png" width="400"><br>
+      <b>Browser</b>
+    </td>
+    <td align="center">
+      <img src="https://cdn.imgtree.co/images/f04MmKHD.png" width="400"><br>
+      <b>Wallpaper Menu</b>
+    </td>
+  </tr>
+</table>
 
 ---
 
