@@ -110,7 +110,6 @@ Super + Q           → Kill active window
 Alt + F4            → Kill active window (alternative)
 Super + W           → Toggle floating window
 Super + L           → Lock screen (swaylock)
-Alt_R + Ctrl_R      → Toggle waybar
 Shift + F11         → Fullscreen
 Super + Shift + F   → Pin window
 ```
@@ -133,7 +132,6 @@ Super + Mouse2       → Resize window (with mouse)
 
 ### Layout & Split
 ```
-Super + J           → Toggle split layout
 Super + S           → Toggle special (scratchpad) workspace
 Super + Shift + S   → Move window to scratchpad
 Super + Alt + S     → Move window to scratchpad (silent)
@@ -228,7 +226,7 @@ Super + Delete      → Exit Hyprland
 ### **Wallpaper & Color Management**
 | Package | Purpose |
 |---------|---------|
-| `swww` | Animated wallpaper daemon |
+| `awww` | Animated wallpaper daemon |
 | `matugen` | Generate color schemes from wallpapers |
 | `pywalfox` | Sync colors to Firefox |
 | `hyprpicker` | Color picker tool |
@@ -283,38 +281,14 @@ ttf-font-awesome                # Icon fonts
 
 **For Arch Linux/Manjaro:**
 ```bash
-sudo pacman -S hyprland kitty rofi wlogout swww matugen pywalfox \
-  papirus-icon-theme gtk-3.0 gtk-4.0 qt5ct qt6ct adw-gtk3 \
+ yay -S hyprland kitty rofi wlogout awww matugen  \
+  papirus-icon-theme gtk3 gtk4 qt5ct qt6ct adw-gtk3 \
   brightnessctl playerctl network-manager-applet swaylock \
-  wl-clipboard cliphist firefox fastfetch quickshell
+  wl-clipboard cliphist firefox fastfetch quickshell imagemagick ttf-nerd-fonts-symbols \
+  ttf-nerd-fonts-symbols-mono papirus-folders-catppuccin-git nautilus
   ```
 
-**For Fedora:**
-```bash
-sudo dnf install hyprland kitty rofi wlogout swww matugen pywalfox \
-  papirus-icon-theme gtk3 gtk4 qt5ct qt6ct adw-gtk3-theme \
-  brightnessctl playerctl network-manager-applet swaylock \
-  wl-clipboard cliphist firefox fastfetch
-```
-
-**For Ubuntu/Debian:**
-```bash
-sudo apt install hyprland kitty rofi wlogout swww brightnessctl \
-  playerctl network-manager-applet swaylock wl-clipboard firefox fastfetch
-```
-*(Note: Some packages like matugen may need to be installed from source or via Rust/Python packages)*
-
-### 2. **Install QuickShell** (from source)
-```bash
-git clone https://github.com/quickshell/quickshell.git
-cd quickshell
-mkdir build && cd build
-cmake ..
-make
-sudo make install
-```
-
-### 3. **Clone Dotfiles**
+### 2. **Clone Dotfiles**
 ```bash
 git clone https://github.com/archayu/dotfiles.git 
 cd dotfiles
@@ -322,27 +296,19 @@ cd dotfiles
 - Move all the files in respective folders 
 - After that run the script `make-executable.sh` to make all the scripts run
 
-### 4. **Set Permissions**
-The included `make-executable.sh` script sets execute permissions on:
-- Rofi launcher script
-- QuickShell clipboard utility
-- Wallpaper manager
-- Icon customization script
-- Screenshot script
 
-### 5. **Configure Cursors**
+### 3. **Configure Cursors**
 Install Catppuccin cursor theme:
 ```bash
 # Arch
-sudo pacman -S catppuccin-cursors
-
-# Or manual installation
-git clone https://github.com/catppuccin/cursors.git
-cd cursors && mkdir -p ~/.local/share/icons
-cp -r Catppuccin-Mocha-Red ~/.local/share/icons/
+yay -S  catppuccin-cursors-mocha
 ```
+# Or manual installation
+ Go To [Catppuccin Cursors](https://github.com/catppuccin/cursors)
 
 
+### 4. FireFox 
+Follow [Firefox](/.mozilla/firefox/README.md)
 ---
 
 ## 🚀 Usage & Customization
@@ -399,7 +365,7 @@ windowrule = match:class ^(steam)$, workspace 9
 ## 🐛 Troubleshooting
 
 ### **Screen going black after login**
-- Ensure `swww-daemon` starts properly
+- Ensure `awww-daemon` starts properly
 - Check `~/.cache/wal/colors.json` exists
 - Verify QuickShell is installed: `which quickshell`
 

@@ -56,9 +56,9 @@ post_hook = 'gsettings set org.gnome.desktop.interface gtk-theme ""; gsettings s
 [templates.gtk4]
 input_path = '~/.config/matugen/templates/gtk-colors.css'
 output_path = '~/.config/gtk-4.0/colors.css'
-post_hook = 'pkill -f gtk'
+post_hook = '~/.config/matugen/reload.sh'
 
 [templates.firefox]
 input_path = '~/.config/matugen/templates/firefox.css'
-output_path = '~/.mozilla/firefox/sbazuxhu.default-release/chrome/colors.css'
+output_path = '~/.mozilla/firefox/xyz.default-release/chrome/colors.css'
 post_hook = 'PROFILE_DIR=$(find ~/.mozilla/firefox -maxdepth 1 -type d -name "*.default-release" | head -n 1); (echo "/* AUTO-GENERATED — DO NOT EDIT */"; find "$PROFILE_DIR/chrome/websites" -maxdepth 1 -type f -name "*.css" ! -name "index.css" | sort | while read -r file; do echo "@import url(\"$(basename "$file")\");"; done) > "$PROFILE_DIR/chrome/websites/index.css"'

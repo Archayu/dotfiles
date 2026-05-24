@@ -6,7 +6,7 @@
 # Author    : archayu
 # GitHub    : https://github.com/archayu/dotfiles
 # Script    : Fast wallpaper selector with thumbnails
-# Requires  : rofi, swww, imagemagick, hyprland, matugen
+# Requires  : rofi, awww, imagemagick, hyprland, matugen
 
 
 wall_dir="${HOME}/.config/walls"
@@ -16,7 +16,7 @@ current_wall="${cache_dir}/.current_wallpaper"
 
 mkdir -p "$cache_dir"
 
-# Swww animation settings
+# awww animation settings
 TRANSITION_TYPE="grow"
 TRANSITION_POS="0.5,0.5"
 TRANSITION_STEP="255"
@@ -90,7 +90,7 @@ generate_colors() {
 # ─────────────────────────────────────────
 set_wallpaper() {
     local wall="$1"
-    swww img "$wall" \
+    awww img "$wall" \
         --transition-type "$TRANSITION_TYPE" \
         --transition-pos "$TRANSITION_POS" \
         --transition-step "$TRANSITION_STEP" \
